@@ -688,10 +688,10 @@ foreach($connections as $key => $sqlite) {
 
         yield [
             '<?php // needed because by default first comment is never fixed
-                class Foo {
-                    /** @use Part<T> */
-                    use Part;
-                }',
+class Foo {
+    /** @use Part<T> */
+    use Part;
+}',
         ];
     }
 
