@@ -685,6 +685,14 @@ foreach($connections as $key => $sqlite) {
             fn ($x) => $x + 42;
             ',
         ];
+
+        yield [
+            '<?php // needed because by default first comment is never fixed
+                class Foo {
+                    /** @use Part<T> */
+                    use Part;
+                }',
+        ];
     }
 
     public static function provideTraitsCases(): iterable
